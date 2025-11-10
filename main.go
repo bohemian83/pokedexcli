@@ -1,5 +1,6 @@
 package main
 
+<<<<<<< Updated upstream
 import (
 	"bufio"
 	"fmt"
@@ -15,4 +16,8 @@ func main() {
 		input = cleanInput(input)[0]
 		fmt.Printf("Your command was: %v\n", input)
 	}
+=======
+func main() {
+	startRepl()
+>>>>>>> Stashed changes
 }
