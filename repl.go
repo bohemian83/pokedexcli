@@ -55,8 +55,8 @@ func startRepl(cfg *config) {
 func getCommands() map[string]cliCommand {
 	commands := map[string]cliCommand{
 		"catch": {
-			name:        "catch",
-			description: "Throws a pokeball at a pokemon - Usage: catch <pokemon name>",
+			name:        "catch <pokemon name>",
+			description: "Throws a pokeball at a pokemon.",
 			callback:    commandCatch,
 		},
 		"exit": {
@@ -65,13 +65,13 @@ func getCommands() map[string]cliCommand {
 			callback:    commandExit,
 		},
 		"explore": {
-			name:        "explore",
-			description: "Shows a list of pokemons at a specified location - Usage: explore <pokemon name>",
+			name:        "explore <area name>",
+			description: "Shows a list of pokemons at a specified location.",
 			callback:    commandExplore,
 		},
 		"inspect": {
-			name:        "inspect",
-			description: "Shows data for a caught Pokemon - Usage: explore <pokemon name>",
+			name:        "inspect <pokemon name>",
+			description: "Shows data for a caught Pokemon.",
 			callback:    commandInspect,
 		},
 		"help": {
@@ -83,6 +83,11 @@ func getCommands() map[string]cliCommand {
 			name:        "map",
 			description: "Shows the next 20 location areas.",
 			callback:    commandMap,
+		},
+		"pokedex": {
+			name:        "map",
+			description: "Shows the next 20 location areas.",
+			callback:    commandPokedex,
 		},
 		"mapb": {
 			name:        "mapb",
