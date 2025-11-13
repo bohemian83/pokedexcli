@@ -1,23 +1,12 @@
 package main
 
-<<<<<<< Updated upstream
 import (
-	"bufio"
-	"fmt"
-	"os"
+	"github.com/bohemian83/pokedexcli/internal/pokeapi"
+	"time"
 )
 
 func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	for {
-		fmt.Print("Pokedex > ")
-		scanner.Scan()
-		input := scanner.Text()
-		input = cleanInput(input)[0]
-		fmt.Printf("Your command was: %v\n", input)
-	}
-=======
-func main() {
-	startRepl()
->>>>>>> Stashed changes
+	pokeClient := pokeapi.NewClient(60*time.Second, 5*time.Minute)
+	cfg := &config{pokeapiClient: pokeClient}
+	startRepl(cfg)
 }
