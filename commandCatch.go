@@ -22,7 +22,7 @@ func commandCatch(cfg *config, args ...string) error {
 		return err
 	}
 
-	fmt.Printf("Throwing a ball at %v...\n", pokemonName)
+	fmt.Printf("Throwing a Pokeball at %v...\n", pokemonName)
 	catchChance := rand.IntN(200) + 50
 
 	if catchChance < response.BaseExperience {
